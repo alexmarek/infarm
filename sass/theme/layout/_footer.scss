@@ -1,0 +1,105 @@
+#wrapper-footer-full {
+    padding: 2rem 0;
+    font-size: 1em;
+    background-color: $primary;
+    color: $primaryWhite;
+    .row {
+        display: flex;
+        @include respond(tab-port){
+            flex-direction: column;
+            #text-7, #text-4, #text-5{
+                width: 100%;
+            }
+        }
+    }
+    .widget-title, a, p{
+        color: $primaryWhite;
+        text-decoration: none;
+        @include regularFont;
+    }
+    .site-footer__back-to-top {
+        font-size: .8em;
+        float: right;
+        color: $primaryWhite;
+        text-transform: uppercase;
+        background-color: $primary;
+        border: none;
+        cursor: pointer;
+    }
+
+    .site-footer__back-to-top__arrow {
+        background-image: url(../images/chevron-white.svg);
+        background-repeat: no-repeat;
+        margin-left: 1rem;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-position-y: -5px;
+    }
+    .site-footer {
+        width: 100%;
+
+        .site-info {
+            margin-left: 1.5rem;
+        }
+    }
+    .site-footer__logo {
+        background-image: url(../images/if-logo.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 67px;
+        height: 1.5rem;
+        display: inline-block;
+        margin-left: 8px;
+    }
+    #text-7 {
+        width: 60%;
+    }
+    #text-3 {
+        display: none;
+    }
+    #text-4 {
+        width: 20%;
+    }
+    #text-5 {
+        width: 20%;
+    }
+
+    #footer-full-content {
+        max-width: 135rem;
+        padding-top: 9rem;
+
+        #text-2 .footer__mailchimp input[type=email]:-webkit-autofill,
+        #text-7 .footer__mailchimp input[type=email]:-webkit-autofill,
+        #text-8 .footer__mailchimp input[type=email]:-webkit-autofill,
+        #text-2 .footer__mailchimp input:-webkit-autofill,
+        #text-7 .footer__mailchimp input:-webkit-autofill,
+        #text-8 .footer__mailchimp input:-webkit-autofill {
+            color: $primaryWhite !important;
+            background-color: $primary !important;
+        }
+
+        #text-2 .footer__mailchimp input[type=submit],
+        #text-7 .footer__mailchimp input[type=submit],
+        #text-8 .footer__mailchimp input[type=submit] {
+            background-image: url(../images/arrow-white.svg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            text-indent: -500rem;
+            right: 0;
+            bottom: 109px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            -webkit-transition: -webkit-transform .2s ease-in-out;
+            transition: -webkit-transform .2s ease-in-out;
+            transition: transform .2s ease-in-out;
+            transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+        }
+    }
+}
