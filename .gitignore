@@ -14,8 +14,8 @@ npm-debug.log
 
 /vendor/
 
-src/sass/understrap/
+/src/sass/understrap/
 
-src/sass/bootstrap4/
+/src/sass/bootstrap4/
 
-src/sass/fontawesome/
+/src/sass/fontawesome/
