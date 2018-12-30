@@ -13,22 +13,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper black-box" id="wrapper-footer">
+<div class="wrapper" id="wrapper-footer">
 
-		<div class="row container-fluid--boxed">
-
-				<footer class="site-footer" id="colophon">
-
-					<div class="site-info">
-
-						&copy;<a class="site-footer__logo"></a>
-						<button class="site-footer__back-to-top">Back to top <span class="site-footer__back-to-top__arrow"></span>	 </button>
-							
-					</div><!-- .site-info -->
-
-				</footer><!-- #colophon -->
-
-		</div><!-- row end -->
+	<footer class="site-info" id="colophon">
+		<div class="container">
+			<a class="logo"></a>
+			<!-- <button class="back-to-top">Back to top <span class="back-to-top__arrow"></span></button> -->
+		</div>
+		
+	</footer><!-- #colophon -->
 
 </div><!-- wrapper end -->
 

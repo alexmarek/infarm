@@ -1,0 +1,141 @@
+.page-template-fullwidthpage {
+    input {
+
+        &[type=email],
+        &[type=text] {
+            -webkit-appearance: none;
+            border: 0;
+            border-bottom: 2px solid $secondary;
+            border-radius: 0;
+            font-family: FedraSansStd, Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            min-height: 6rem;
+            background-color: $primaryWhite;
+            color: $secondary;
+            padding-left: 0;
+            font-size: 0.9em;
+        }
+    }
+
+    select,
+    textarea {
+        -webkit-appearance: none;
+        border: 0;
+        border-bottom: 2px solid $secondary;
+        border-radius: 0;
+        font-family: FedraSansStd, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        min-height: 6rem;
+        background-color: $primaryWhite;
+        color: $secondary;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+
+    input {
+
+        &[type=email]:focus,
+        &[type=text]:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    select:focus,
+    textarea:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    input {
+
+        &[type=email]:-webkit-autofill:focus,
+        &[type=text]:-webkit-autofill:focus {
+            border: 1px solid $primaryWhite;
+            -webkit-text-fill-color: $primaryWhite;
+            -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+            transition: background-color 5000s ease-in-out 0s;
+            background-color: $primary;
+            color: $primaryWhite;
+            padding-left: 1em;
+        }
+    }
+
+    select:-webkit-autofill:focus,
+    textarea:-webkit-autofill:focus {
+        border: 1px solid $primaryWhite;
+        -webkit-text-fill-color: $primaryWhite;
+        -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+        transition: background-color 5000s ease-in-out 0s;
+        background-color: $primary;
+        color: $primaryWhite;
+        padding-left: 1em;
+    }
+
+    input[type=email] {
+        margin-bottom: 5rem;
+    }
+
+    select {
+        background-image: url(../images/chevron-black.svg);
+        background-repeat: no-repeat;
+        background-position: 100%;
+        cursor: pointer;
+    }
+}
+
+.page-template-fullwidthpage {
+    textarea {
+        text-transform: none;
+        border: solid 2px $secondary;
+        padding: 1em;
+
+        &:focus {
+            color: $primary;
+        }
+    }
+
+    .wpcf7 input[type=submit] {
+        width: 100%;
+        cursor: pointer;
+        background-position: 95%;
+        text-align: left;
+        border: solid 2px $primary;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 1em;
+        background-color: $primary;
+        color: $primaryWhite;
+        font-family: FedraSansStd, Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        height: 6rem;
+        border: 0;
+        border-radius: 0;
+        background-image: url(../images/arrow-white.svg);
+        background-repeat: no-repeat;
+    }
+}
+
+.page-template-fullwidthpage .wpcf7 input[type=submit] {
+    &::after {
+        background-color: $primary;
+    }
+
+    &:hover {
+        background-image: url(../images/arrow-black.svg);
+        background-repeat: no-repeat;
+        background-color: $primaryWhite;
+        color: $primary;
+    }
+}
+
+.page-template-fullwidthpage .wpcf7 input[type=submit] {
+
+    &:active,
+    &:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}

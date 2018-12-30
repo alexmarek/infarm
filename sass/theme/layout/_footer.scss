@@ -3,12 +3,38 @@
     font-size: 1em;
     background-color: $primary;
     color: $primaryWhite;
+    padding-top: 10rem;
     .row {
         display: flex;
+        #text-7 {
+            width: 70%;
+        }
+        #text-3 {
+            display: none;
+        }
+        #text-4 {
+            width: 15%;
+        }
+        #text-5 {
+            width: 15%;
+        }
+        #text-4, #text-5 {
+            p, a{
+                @include lightFont;
+                line-height: 4rem;
+            }   
+        }
         @include respond(tab-port){
-            flex-direction: column;
-            #text-7, #text-4, #text-5{
+            flex-wrap: wrap;
+            #text-7{
                 width: 100%;
+            }
+            #text-4, #text-5{
+                width: 50%;
+                margin-top: 10rem;
+                p, a{
+                    line-height: 6rem;
+                }   
             }
         }
     }
@@ -17,82 +43,48 @@
         text-decoration: none;
         @include regularFont;
     }
-    .site-footer__back-to-top {
-        font-size: .8em;
-        float: right;
-        color: $primaryWhite;
-        text-transform: uppercase;
-        background-color: $primary;
-        border: none;
-        cursor: pointer;
+    .widget-title{
+        font-size: 1.8rem;
+        line-height: 2.4rem;
     }
-
-    .site-footer__back-to-top__arrow {
-        background-image: url(../images/chevron-white.svg);
-        background-repeat: no-repeat;
-        margin-left: 1rem;
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        -webkit-transform: rotate(180deg);
-        transform: rotate(180deg);
-        background-position-y: -5px;
-    }
-    .site-footer {
-        width: 100%;
-
-        .site-info {
-            margin-left: 1.5rem;
+    form {
+        max-width: 47rem;
+        position: relative;
+        label, input[type="email"] {
+            width: 100%;
+            @include lightFont;
+            text-transform: uppercase;
         }
-    }
-    .site-footer__logo {
-        background-image: url(../images/if-logo.svg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        width: 67px;
-        height: 1.5rem;
-        display: inline-block;
-        margin-left: 8px;
-    }
-    #text-7 {
-        width: 60%;
-    }
-    #text-3 {
-        display: none;
-    }
-    #text-4 {
-        width: 20%;
-    }
-    #text-5 {
-        width: 20%;
-    }
-
-    #footer-full-content {
-        max-width: 135rem;
-        padding-top: 9rem;
-
-        #text-2 .footer__mailchimp input[type=email]:-webkit-autofill,
-        #text-7 .footer__mailchimp input[type=email]:-webkit-autofill,
-        #text-8 .footer__mailchimp input[type=email]:-webkit-autofill,
-        #text-2 .footer__mailchimp input:-webkit-autofill,
-        #text-7 .footer__mailchimp input:-webkit-autofill,
-        #text-8 .footer__mailchimp input:-webkit-autofill {
-            color: $primaryWhite !important;
-            background-color: $primary !important;
+        label{
+            font-size: 1.8rem;
+            line-height: 2.4rem;
         }
-
-        #text-2 .footer__mailchimp input[type=submit],
-        #text-7 .footer__mailchimp input[type=submit],
-        #text-8 .footer__mailchimp input[type=submit] {
-            background-image: url(../images/arrow-white.svg);
+        input[type="email"] {
+            line-height: 5rem;
+            border: solid 1px $primaryWhite;
+            background-color: $buttonGrey;
+            color: $primaryWhite;
+            padding: 0 2rem;
+            font-size: 1.8rem;
+            margin-top: 2rem;
+            transition: background-color 0.2s ease-in-out;
+            &:focus{
+                background-color: #979797;
+            }
+        }
+        ::placeholder{
+            color: $primaryWhite;
+        }
+        input[type=submit] {
+            background-image: url(../images/arrow.svg);
             background-repeat: no-repeat;
             background-size: 100%;
-            width: 3rem;
-            height: 3rem;
+            width: 2.8rem;
+            height: 2.4rem;
             position: absolute;
             text-indent: -500rem;
-            right: 0;
-            bottom: 109px;
+            right: 2rem;
+            bottom: 1.4rem;
             background-color: transparent;
             border: none;
             cursor: pointer;
@@ -100,6 +92,58 @@
             transition: -webkit-transform .2s ease-in-out;
             transition: transform .2s ease-in-out;
             transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+            &:hover {
+                transform: scale(1.25);
+            }
+        }
+        input[type=email]:-webkit-autofill, input:-webkit-autofill {
+            color: $primaryWhite !important;
+            background-color: $primary !important;
+        }
+        .mc4wp-response {
+            position: absolute;
+            top: -16rem;
+            p{
+                font-size: 1.6rem;
+                color: lightgreen;
+            }
+        }
+        @include respond(phone){
+            max-width: 100%;
+        }
+    }
+}
+
+.site-info {
+    padding: 4rem 0;
+    background-color: $primary;
+    .logo {
+        background-image: url(../images/if-logo.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 11rem;
+        height: 4.5rem;
+        display: inline-block;
+    }
+    .back-to-top {
+        font-size: .8em;
+        float: right;
+        color: $primaryWhite;
+        text-transform: uppercase;
+        background-color: $primary;
+        border: none;
+        cursor: pointer;
+        @include regularFont;
+        &__arrow {
+            background-image: url(../images/chevron-white.svg);
+            background-repeat: no-repeat;
+            margin-left: 1rem;
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            background-position-y: -5px;
         }
     }
 }

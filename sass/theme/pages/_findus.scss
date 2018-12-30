@@ -1,0 +1,508 @@
+.page-template-finduspage .container-map,
+.page-template-finduspage-de .container-map,
+.page-template-finduspage-fr .container-map {
+    margin-top: 6em;
+}
+
+.page-template-finduspage .results-number,
+.page-template-finduspage-de .results-number,
+.page-template-finduspage-fr .results-number {
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: .2s all ease-in-out;
+    transition: .2s all ease-in-out;
+    padding-left: 36px;
+}
+
+.page-template-finduspage .results-number.loading #results-number,
+.page-template-finduspage-de .results-number.loading #results-number,
+.page-template-finduspage-fr .results-number.loading #results-number,
+.page-template-finduspage .results-number.loaded .spinner,
+.page-template-finduspage-de .results-number.loaded .spinner,
+.page-template-finduspage-fr .results-number.loaded .spinner {
+    opacity: 0;
+}
+
+.page-template-finduspage .results-number.loaded #results-number,
+.page-template-finduspage-de .results-number.loaded #results-number,
+.page-template-finduspage-fr .results-number.loaded #results-number {
+    opacity: 1;
+    -webkit-transition: 1s all ease-in-out;
+    transition: 1s all ease-in-out;
+    left: 14px;
+    top: -4px;
+    position: absolute;
+}
+
+.page-template-finduspage .content-item .col-md-6>p,
+.page-template-finduspage-de .content-item .col-md-6>p,
+.page-template-finduspage-fr .content-item .col-md-6>p {
+    padding-right: 10rem;
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage .content-item .col-md-6>p,
+    .page-template-finduspage-de .content-item .col-md-6>p,
+    .page-template-finduspage-fr .content-item .col-md-6>p {
+        padding-right: 0;
+    }
+}
+
+.page-template-finduspage #mapList,
+.page-template-finduspage-de #mapList,
+.page-template-finduspage-fr #mapList {
+    display: none;
+    width: 100%;
+    margin-top: 4em;
+}
+
+.page-template-finduspage #mapList span,
+.page-template-finduspage-de #mapList span,
+.page-template-finduspage-fr #mapList span {
+    font-family: FedraSansLight, Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.page-template-finduspage #mapList h4,
+.page-template-finduspage-de #mapList h4,
+.page-template-finduspage-fr #mapList h4 {
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+    font-size: 1.4em;
+    text-transform: uppercase;
+}
+
+.page-template-finduspage #mapList h5,
+.page-template-finduspage-de #mapList h5,
+.page-template-finduspage-fr #mapList h5 {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+    padding-right: 5rem;
+    background-position: right -3px;
+    text-indent: -2rem;
+    background-image: url(../images/arrow-black.svg);
+    background-repeat: no-repeat;
+}
+
+
+@include respond(tab-land) {
+
+    .page-template-finduspage #mapList h5,
+    .page-template-finduspage-de #mapList h5,
+    .page-template-finduspage-fr #mapList h5 {
+        font-size: 0.9em;
+    }
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage #mapList h5,
+    .page-template-finduspage-de #mapList h5,
+    .page-template-finduspage-fr #mapList h5 {
+        text-align: right;
+        padding-right: 4rem;
+        text-indent: 0;
+    }
+}
+
+.page-template-finduspage #mapList h5:hover,
+.page-template-finduspage-de #mapList h5:hover,
+.page-template-finduspage-fr #mapList h5:hover {
+    text-decoration: underline;
+}
+
+.page-template-finduspage #map,
+.page-template-finduspage-de #map,
+.page-template-finduspage-fr #map {
+    height: 500px;
+    width: 100%;
+    margin-top: 2em;
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage #map,
+    .page-template-finduspage-de #map,
+    .page-template-finduspage-fr #map {
+        margin-left: 1.5rem;
+        margin-right: 18px;
+    }
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage .page-section,
+    .page-template-finduspage-de .page-section,
+    .page-template-finduspage-fr .page-section {
+        margin-left: -1.2rem;
+        max-width: calc(100vw + 24px) !important;
+        width: 107%;
+    }
+}
+
+.page-template-finduspage {
+
+    input,
+    select {
+        width: 100%;
+        height: 5rem;
+        background-color: $primaryWhite;
+        border: 0;
+        border-bottom: solid $primary 2px;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+}
+
+.page-template-finduspage-de {
+
+    input,
+    select {
+        width: 100%;
+        height: 5rem;
+        background-color: $primaryWhite;
+        border: 0;
+        border-bottom: solid $primary 2px;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+}
+
+.page-template-finduspage-fr {
+
+    input,
+    select {
+        width: 100%;
+        height: 5rem;
+        background-color: $primaryWhite;
+        border: 0;
+        border-bottom: solid $primary 2px;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+}
+
+.page-template-finduspage {
+    input {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    select {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.page-template-finduspage-de {
+    input {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    select {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.page-template-finduspage-fr {
+    input {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+
+    select {
+
+        &:active,
+        &:focus {
+            outline: 0;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+        }
+    }
+}
+
+.page-template-finduspage select,
+.page-template-finduspage-de select,
+.page-template-finduspage-fr select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../images/chevron-black.svg);
+    background-repeat: no-repeat;
+    background-position: 100%;
+    cursor: pointer;
+}
+
+.page-template-finduspage .button--black,
+.page-template-finduspage-de .button--black,
+.page-template-finduspage-fr .button--black {
+    width: 100%;
+    cursor: pointer;
+    background-position-x: 95%;
+    text-align: left;
+    background-image: url(../images/location-black.svg);
+    background-repeat: no-repeat;
+    border: solid 2px $primary;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: .9em;
+    line-height: 3em;
+    margin-top: 1em;
+}
+
+.page-template-finduspage .button--black.active,
+.page-template-finduspage-de .button--black.active,
+.page-template-finduspage-fr .button--black.active {
+    -webkit-animation: pulsate infinite 1.2s;
+    animation: pulsate infinite 1.2s;
+}
+
+.page-template-finduspage .button--black:hover,
+.page-template-finduspage-de .button--black:hover,
+.page-template-finduspage-fr .button--black:hover {
+    background-image: url(../images/location-white.svg);
+    background-repeat: no-repeat;
+}
+
+.page-template-finduspage .button--black::after,
+.page-template-finduspage-de .button--black::after,
+.page-template-finduspage-fr .button--black::after {
+    height: 0;
+}
+
+@include respond(tab-port) {
+    .page-template-finduspage {
+
+        .button--black,
+        input,
+        select {
+            font-size: 0.8em;
+        }
+    }
+
+    .page-template-finduspage-de {
+
+        .button--black,
+        input,
+        select {
+            font-size: 0.8em;
+        }
+    }
+
+    .page-template-finduspage-fr {
+
+        .button--black,
+        input,
+        select {
+            font-size: 0.8em;
+        }
+    }
+}
+
+.page-template-finduspage #location-submit,
+.page-template-finduspage-de #location-submit,
+.page-template-finduspage-fr #location-submit {
+    position: absolute;
+    right: 1rem;
+    top: 9.5rem;
+    background-image: url(../images/search-black.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    text-indent: -500rem;
+}
+
+.page-template-finduspage #location-submit:focus,
+.page-template-finduspage-de #location-submit:focus,
+.page-template-finduspage-fr #location-submit:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.page-template-finduspage #location-input,
+.page-template-finduspage-de #location-input,
+.page-template-finduspage-fr #location-input {
+    margin: 2em 0;
+}
+
+.page-template-finduspage {
+
+    #showListResults,
+    #showMapResults {
+        cursor: pointer;
+        padding-left: 3.5rem;
+        height: 3rem;
+        display: inline-block;
+        margin-right: 3rem;
+    }
+}
+
+.page-template-finduspage-de {
+
+    #showListResults,
+    #showMapResults {
+        cursor: pointer;
+        padding-left: 3.5rem;
+        height: 3rem;
+        display: inline-block;
+        margin-right: 3rem;
+    }
+}
+
+.page-template-finduspage-fr {
+
+    #showListResults,
+    #showMapResults {
+        cursor: pointer;
+        padding-left: 3.5rem;
+        height: 3rem;
+        display: inline-block;
+        margin-right: 3rem;
+    }
+}
+
+.page-template-finduspage #showListResults,
+.page-template-finduspage-de #showListResults,
+.page-template-finduspage-fr #showListResults {
+    background-image: url(../images/list-grey.svg);
+    background-repeat: no-repeat;
+    color: $secondary;
+}
+
+.page-template-finduspage #showListResults.active,
+.page-template-finduspage-de #showListResults.active,
+.page-template-finduspage-fr #showListResults.active {
+    background-image: url(../images/list.svg);
+    background-repeat: no-repeat;
+    color: $primary;
+}
+
+.page-template-finduspage #showMapResults,
+.page-template-finduspage-de #showMapResults,
+.page-template-finduspage-fr #showMapResults {
+    background-image: url(../images/map-grey.svg);
+    background-repeat: no-repeat;
+    color: $secondary;
+}
+
+.page-template-finduspage #showMapResults.active,
+.page-template-finduspage-de #showMapResults.active,
+.page-template-finduspage-fr #showMapResults.active {
+    background-image: url(../images/map.svg);
+    background-repeat: no-repeat;
+    color: $primary;
+}
+
+
+.page-template-finduspage .map-infopanel strong,
+.page-template-finduspage-de .map-infopanel strong,
+.page-template-finduspage-fr .map-infopanel strong {
+    @include lightFont;
+}
+
+.page-template-finduspage .map-infopanel h4,
+.page-template-finduspage-de .map-infopanel h4,
+.page-template-finduspage-fr .map-infopanel h4 {
+    text-transform: uppercase;
+    @include boldFont;
+}
+
+
+.page-template-finduspage #noResults p,
+.page-template-finduspage-de #noResults p,
+.page-template-finduspage-fr #noResults p {
+    @include lightFont;
+    font-size: 2em;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+.page-template-finduspage #noResults p span,
+.page-template-finduspage-de #noResults p span,
+.page-template-finduspage-fr #noResults p span {
+    @include regularFont;
+}
+
+.page-template-finduspage #noResults #showAvailableCities,
+.page-template-finduspage-de #noResults #showAvailableCities,
+.page-template-finduspage-fr #noResults #showAvailableCities {
+    cursor: pointer;
+}
+
+.page-template-finduspage .gm-style div div div div div div div div,
+.page-template-finduspage-de .gm-style div div div div div div div div,
+.page-template-finduspage-fr .gm-style div div div div div div div div {
+    top: -10rem;
+}
+
+.page-template-finduspage .gm-style div div div div div div div div h5,
+.page-template-finduspage-de .gm-style div div div div div div div div h5,
+.page-template-finduspage-fr .gm-style div div div div div div div div h5 {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    @include boldFont;
+    padding-right: 5rem;
+    background-position: right -5px;
+    background-image: url(../images/arrow-black.svg);
+    background-repeat: no-repeat;
+    width: 12rem;
+    float: right;
+}
+
+.page-template-finduspage .gm-style div div div div div div div div h5:hover,
+.page-template-finduspage-de .gm-style div div div div div div div div h5:hover,
+.page-template-finduspage-fr .gm-style div div div div div div div div h5:hover {
+    text-decoration: underline;
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage .gm-style div div div div div div div div,
+    .page-template-finduspage-de .gm-style div div div div div div div div,
+    .page-template-finduspage-fr .gm-style div div div div div div div div {
+        top: -3rem;
+        max-width: 25rem;
+    }
+
+    .page-template-finduspage .gm-style div div div div div div div div h4,
+    .page-template-finduspage-de .gm-style div div div div div div div div h4,
+    .page-template-finduspage-fr .gm-style div div div div div div div div h4 {
+        font-size: 1em;
+    }
+}

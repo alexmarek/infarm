@@ -1,0 +1,74 @@
+.single-recipe main {
+    padding: 0 0 3rem 0;
+}
+
+.single-recipe-section--1 {
+    img {
+        margin-bottom: 3rem;
+    }
+
+    .main-heading,
+    h3 {
+        max-width: 100%;
+    }
+
+    p {
+        font-size: 0.8em !important;
+        line-height: 2 !important;
+
+        strong {
+            width: 16rem;
+            display: inline-block;
+            font-family: FedraSerifBold, Georgia, "Times New Roman", Times, serif;
+        }
+    }
+}
+
+@include respond(tab-port) {
+    .single-recipe-section--1 p {
+        font-size: 0.9em !important;
+
+        strong {
+            width: 13.5rem;
+            padding-bottom: 0.6em;
+        }
+    }
+}
+
+.single-recipe-section--1__related {
+    font-family: FedraSansLight, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.single-recipe-section--1 .recipe-preparation ol {
+    padding-top: 0;
+    margin-top: 0;
+    font-family: FedraSerifStd, Georgia, 'Times New Roman', Times, serif;
+    font-size: .8em;
+    list-style: none;
+    counter-reset: section;
+
+    li {
+        margin-bottom: 1.5em;
+
+        &::before {
+            counter-increment: section;
+            content: counter(section);
+            display: inline-block;
+            width: 2em;
+            margin-left: -2.5em;
+            padding-right: 1em;
+            margin-right: .55em;
+            text-align: right;
+            direction: rtl;
+            font-family: FedraSerifBold, Georgia, "Times New Roman", Times, serif;
+        }
+    }
+}
+
+@include respond(tab-port) {
+    .single-recipe-section--1 .recipe-preparation ol li {
+        font-size: 0.8em;
+    }
+}

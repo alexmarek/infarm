@@ -12,24 +12,20 @@
         }
     }
     &-image {
-        margin-top: 14rem;
         &bg{
-            background-size: cover;
-            width: 100vw;
             height: 50rem;
-            margin-left: calc(((100vw - 144rem)/2) - (100vw - 144rem));
-            @include respond(tab-land) {
-                height: 40rem;
-                margin-left: -3rem;
-            }
         } 
     }
     &-press-carousel {
         a{
             img{
                 max-height: 2rem;
+                transition: transform 0.2s ease-in-out;
                 @include respond(tab-port) {
                     max-height: 4rem;
+                }
+                &:hover {
+                    transform: scale(1.1)
                 }
             }
         }

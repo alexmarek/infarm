@@ -58,7 +58,7 @@ jQuery(document).ready(function($){
             }
         }
     });
-    $(".site-footer__back-to-top").click(function() {
+    $(".back-to-top").click(function() {
         $('html, body').animate({
           scrollTop: 0
         }, 800);

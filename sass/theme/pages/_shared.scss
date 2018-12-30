@@ -1,0 +1,69 @@
+// sharing buttons, found on recipes page, can be shown elsewhere
+
+.share {
+    p {
+        font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+        text-align: right;
+    }
+
+    a {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2rem;
+        background-position: center;
+        vertical-align: text-bottom;
+    }
+}
+
+.share__facebook {
+    background-image: url(../images/facebook.svg);
+    background-repeat: no-repeat;
+}
+
+.share__twitter {
+    background-image: url(../images/twitter.svg);
+    background-repeat: no-repeat;
+}
+
+.share__email {
+    background-image: url(../images/maill.svg);
+    background-repeat: no-repeat;
+}
+
+@include respond(tab-port) {
+    #cookie-law-info-bar {
+        line-height: 3rem;
+
+        .large.cli-plugin-button {
+            width: 95%;
+            text-align: center;
+        }
+    }
+}
+
+
+// page sections
+
+.page-section{
+    
+    &__image {
+        margin-top: 14rem;
+        &__bg{
+            background-size: cover;
+            background-position: center;
+            width: 100vw;
+            height: 64rem;
+            margin-left: calc(((100vw - 144rem)/2) - (100vw - 144rem));
+        } 
+        @include respond(tab-land) {
+            margin-top: 8rem;
+            &__bg{
+                height: 40rem;
+                margin-left: -3rem;
+            }
+        }
+    }
+    p {
+        font-size: 2.4rem;
+    }
+}
