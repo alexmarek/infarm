@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
   gtag('config', 'UA-75124049-1');
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	_linkedin_partner_id = "564617";
 	window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
 	window._linkedin_data_partner_ids.push(_linkedin_partner_id);
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </script>
 <noscript>
 	<img height="1" width="1" style="display:none;" alt="" src="https://dc.ads.linkedin.com/collect/?pid=564617&fmt=gif" />
-</noscript>
+</noscript> -->
 
 </body>
 

@@ -28,10 +28,10 @@ function FindUsPage(){
     if ( is_page('find-us') || is_page('standorte')) {
         wp_enqueue_script('axios', 'https://unpkg.com/axios/dist/axios.min.js', array(), 1, true );
         wp_enqueue_script('passive', 'https://unpkg.com/default-passive-events', array(), 1, true );
-        wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyB5bIvxRnRHxszyN-t9ShZGitPn6Lq6BPg&libraries=geometry,places', array(), 1 );
+        wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key='. MAPS_API . '&libraries=geometry,places', array(), 1 );
     } 
     if ( is_page('find-us') ) {
-        wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.js', array(), 2, true );
+        wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.js', array(), 3, true );
     } 
     if ( is_page('standorte')) {
         wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map-de.min.js', array(), 2, true );
