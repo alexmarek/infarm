@@ -1786,6 +1786,13 @@ button:active, button:focus, button:hover {
   .results-number.loading .spinner {
     opacity: 1; }
 
+.map-infopanel p {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 1rem 0;
+  letter-spacing: -0.5px;
+  max-width: 100%; }
+
 .map-infopanel strong {
   font-family: FedraSansLight, Arial, Helvetica, sans-serif; }
 
@@ -1830,128 +1837,75 @@ button:active, button:focus, button:hover {
 .page-template-careerpage .content-item {
   margin-top: 0; }
 
-.page-template-fullwidthpage input[type=email], .page-template-fullwidthpage input[type=text] {
-  -webkit-appearance: none;
-  border: 0;
-  border-bottom: 2px solid #8a8a8a;
-  border-radius: 0;
-  font-family: FedraSansStd, Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  min-height: 6rem;
-  background-color: #FFFFFF;
-  color: #8a8a8a;
-  padding-left: 0;
-  font-size: 0.9em; }
-
-.page-template-fullwidthpage select,
-.page-template-fullwidthpage textarea {
-  -webkit-appearance: none;
-  border: 0;
-  border-bottom: 2px solid #8a8a8a;
-  border-radius: 0;
-  font-family: FedraSansStd, Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  min-height: 6rem;
-  background-color: #FFFFFF;
-  color: #8a8a8a;
-  padding-left: 0;
-  font-size: 0.9em; }
-
-.page-template-fullwidthpage input[type=email]:focus, .page-template-fullwidthpage input[type=text]:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.page-template-fullwidthpage select:focus,
-.page-template-fullwidthpage textarea:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.page-template-fullwidthpage input[type=email]:-webkit-autofill:focus, .page-template-fullwidthpage input[type=text]:-webkit-autofill:focus {
-  border: 1px solid #FFFFFF;
-  -webkit-text-fill-color: #FFFFFF;
-  -webkit-box-shadow: 0 0 0 100rem #231f20 inset;
-  box-shadow: 0 0 0 100rem #231f20 inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-  background-color: #231f20;
-  color: #FFFFFF;
-  padding-left: 1em; }
-
-.page-template-fullwidthpage select:-webkit-autofill:focus,
-.page-template-fullwidthpage textarea:-webkit-autofill:focus {
-  border: 1px solid #FFFFFF;
-  -webkit-text-fill-color: #FFFFFF;
-  -webkit-box-shadow: 0 0 0 100rem #231f20 inset;
-  box-shadow: 0 0 0 100rem #231f20 inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
-  transition: background-color 5000s ease-in-out 0s;
-  background-color: #231f20;
-  color: #FFFFFF;
-  padding-left: 1em; }
-
-.page-template-fullwidthpage input[type=email] {
-  margin-bottom: 5rem; }
-
-.page-template-fullwidthpage select {
-  background-image: url(../images/chevron-black.svg);
-  background-repeat: no-repeat;
-  background-position: 100%;
-  cursor: pointer; }
-
-.page-template-fullwidthpage textarea {
-  text-transform: none;
-  border: solid 2px #8a8a8a;
-  padding: 1em; }
-  .page-template-fullwidthpage textarea:focus {
-    color: #231f20; }
-
-.page-template-fullwidthpage .wpcf7 input[type=submit] {
-  width: 100%;
-  cursor: pointer;
-  background-position: 95%;
-  text-align: left;
-  border: solid 2px #231f20;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  font-size: 1em;
-  background-color: #231f20;
-  color: #FFFFFF;
-  font-family: FedraSansStd, Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  height: 6rem;
-  border: 0;
-  border-radius: 0;
-  background-image: url(../images/arrow-white.svg);
-  background-repeat: no-repeat; }
-
-.page-template-fullwidthpage .wpcf7 input[type=submit]::after {
-  background-color: #231f20; }
-
-.page-template-fullwidthpage .wpcf7 input[type=submit]:hover {
-  background-image: url(../images/arrow-black.svg);
-  background-repeat: no-repeat;
-  background-color: #FFFFFF;
-  color: #231f20; }
-
-.page-template-fullwidthpage .wpcf7 input[type=submit]:active, .page-template-fullwidthpage .wpcf7 input[type=submit]:focus {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.wpcf7 input:not(:disabled):not(.disabled)[type=submit] {
-  background-color: #231f20;
-  color: #FFFFFF;
-  background-image: url(../images/arrow-white.svg);
-  background-repeat: no-repeat;
-  position: relative;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-  border-bottom: 2px solid transparent; }
-
-.wpcf7 input:not(:disabled):not(.disabled)[type=submit]:hover {
-  background-image: url(../images/arrow-black.svg);
-  background-repeat: no-repeat;
-  color: #231f20;
-  border-bottom: 2px solid #231f20; }
+.contact-page {
+  max-width: 100rem; }
+  .contact-page ::-webkit-input-placeholder {
+    color: #b8b8b8; }
+  .contact-page ::-ms-input-placeholder {
+    color: #b8b8b8; }
+  .contact-page ::placeholder {
+    color: #b8b8b8; }
+  .contact-page select, .contact-page input, .contact-page button, .contact-page textarea {
+    font-family: FedraSansLight, Arial, Helvetica, sans-serif;
+    line-height: 5rem;
+    font-size: 1.6rem;
+    margin-bottom: 2.3rem; }
+  .contact-page input,
+  .contact-page select {
+    width: 100%;
+    height: 5rem;
+    line-height: 5rem;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    border: solid 1px #231f20;
+    position: relative; }
+  .contact-page textarea {
+    border: solid 1px #231f20;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 0 2rem;
+    height: 28rem; }
+  .contact-page select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../images/v-down.svg);
+    background-repeat: no-repeat;
+    background-position: 96%;
+    cursor: pointer;
+    border: solid 1px #231f20; }
+    @media only screen and (max-width: 56.25em) {
+      .contact-page select {
+        background-size: 2.6rem; } }
+  .contact-page .wpcf7 input:not(:disabled):not(.disabled)[type=submit] {
+    text-transform: uppercase;
+    border: solid 1px #231f20;
+    text-decoration: none;
+    height: 5rem;
+    line-height: 5rem;
+    -webkit-transition: .2s all ease-in-out;
+    transition: .2s all ease-in-out;
+    padding: 0 2rem;
+    background-color: #FFFFFF;
+    position: relative;
+    font-size: .9em;
+    font-family: FedraSansStd, Arial, Helvetica, sans-serif;
+    color: #231f20;
+    width: 14rem;
+    cursor: pointer;
+    background: transparent;
+    float: right; }
+    .contact-page .wpcf7 input:not(:disabled):not(.disabled)[type=submit]:hover {
+      text-decoration: none;
+      opacity: 0.8;
+      color: #231f20;
+      border-bottom: solid 1px;
+      background: none; }
+  .contact-page span.wpcf7-not-valid-tip {
+    font-family: FedraSansStd, Arial, Helvetica, sans-serif;
+    font-size: 1.4rem; }
 
 #cookie-law-info-bar {
   font-family: FedraSansLight, Arial, Helvetica, sans-serif !important;
@@ -1993,15 +1947,6 @@ button:active, button:focus, button:hover {
   margin-top: 5rem; }
   .page-template-imprintpage .content-item p {
     line-height: 1.5em; }
-
-.language-fr nav ul a {
-  margin: 0 1em; }
-
-.language-fr .main-heading {
-  font-size: 2.2em;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none; }
 
 @media only screen and (max-width: 56.25em) {
   .language-fr .navbar-expand-md .navbar-nav .nav-link {

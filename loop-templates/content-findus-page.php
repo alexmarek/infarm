@@ -39,7 +39,7 @@
 					<div class="spinner">
 						<div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
 					</div>
-					<span id="results-number">0</span> 
+					<span id="results-number"></span> 
 				RESULTS</h4>
 			</div>
 			<div class="map-results__right">

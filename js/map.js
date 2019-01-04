@@ -258,7 +258,7 @@ function updateMap(b, d) {
   userLatLng = new google.maps.LatLng(b, d), map.setZoom(11), map.setCenter(userLatLng), myLocationMarker.push(new google.maps.Marker({
     position: userLatLng,
     map: map,
-    icon: '/wp-content/themes/infarm-child/images/map-marker.svg'
+    icon: '/wp-content/themes/infarm-child/images/map-pin.svg'
   })), showNumberOfResults(), noResults || (showMapResults(), noResultsSuggestion.style.display = 'none'), window.location.hash = 'location-getMylocation'
 }
 changePlace = function (b, d) {
@@ -322,7 +322,7 @@ function showSuggestedCity(b) {
       updateMap(j, k), userLatLng = new google.maps.LatLng(j, k), map.setZoom(7), map.setCenter(userLatLng), myLocationMarker.push(new google.maps.Marker({
         position: userLatLng,
         map: map,
-        icon: '/wp-content/themes/infarm-child/images/map-marker.svg'
+        icon: '/wp-content/themes/infarm-child/images/map-pin.svg'
       })), listResultsContainer.style.display = 'none', noResultsSuggestion.style.display = 'none', mapResultsContainer.style.display = 'block', showNumberOfResults()
     } else console.log('Something went wrong ' + h)
   })
