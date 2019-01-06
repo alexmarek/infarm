@@ -1,10 +1,6 @@
 <?php
 /**
  * Template Name: Find Us Page
- *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
- *
- * @package understrap
  */
 
 get_header();

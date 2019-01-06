@@ -4,7 +4,7 @@
 }
 
 ::selection {
-    background-color: $primaryWhite;
+    background-color: $secondaryTwo;
     color: $primary;
 }
 
@@ -101,13 +101,25 @@ input, select, textarea {
 
 a {
     color: $primary;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.15s ease-in-out;
 
+    &:hover:not(.button) {
+        opacity: 0.6;
+    }
+}
+
+h2 a {
+    text-decoration: none;
+    border-bottom: solid 1px $primary;
     &:hover {
         text-decoration: none;
-        opacity: 0.7;
+        border-color: $primaryWhite;
+        opacity: 0.6;
     }
+}
+
+.navbar-brand, .nav-link {
+    border-bottom: 0;
 }
 
 :focus {

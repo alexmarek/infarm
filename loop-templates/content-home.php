@@ -1,7 +1,7 @@
 <header class="entry-header">
 
 	<div class="bg-video">
-		<video class="bg-video__content" autoplay muted loop poster="<?php $image = get_field('page_header_image'); echo $image['url']; ?>">
+		<video class="bg-video__content" preload="none" autoplay muted loop poster="<?php $image = get_field('page_header_image'); echo $image['url']; ?>">
 			<source src="/video/infarm-homepage.mp4" type="video/mp4">
 			<source src="/video/infarm-homepage.webm" type="video/webm">
 		</video>

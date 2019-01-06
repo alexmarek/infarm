@@ -25,8 +25,8 @@ button {
 
     &:hover {
         text-decoration: none;
-        opacity: 0.8;
         color: $primary;
+        box-shadow: inset 0px 0px 0px 3px $primary;
     }
 }
 
@@ -46,6 +46,7 @@ button {
     background-image: url(../images/arrow-white.svg);
     background-repeat: no-repeat;
 }
+
 
 .button--black {
     &::after {
