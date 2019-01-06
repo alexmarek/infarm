@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="hfeed site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="container-fluid" itemscope itemtype="http://schema.org/WebSite">
+	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
 
 		<nav class="navbar navbar-expand-md container">
 
