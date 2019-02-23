@@ -43,6 +43,13 @@
             background-size: 2.6rem;
         }
     }
+    input[type="submit"]{
+        &:hover {
+            text-decoration: none;
+            color: $primary;
+            box-shadow: inset 0px 0px 0px 3px $primary;
+        }
+    }
 
     .wpcf7 input:not(:disabled):not(.disabled)[type=submit] {
         text-transform: uppercase;

@@ -16,9 +16,8 @@ function theme_enqueue_styles() {
 	// Get the theme data
 	$the_theme = wp_get_theme();
     wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
-    wp_enqueue_script( 'jquery', true );
-	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), true);
-    wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+    wp_enqueue_script( 'jQuery', 'https://code.jquery.com/jquery-2.2.3.min.js', array(), '2.2' );
+    wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), 1, true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
@@ -26,9 +25,9 @@ function theme_enqueue_styles() {
 
 function FindUsPage(){
     if ( is_page('find-us') || is_page('standorte')) {
-        wp_enqueue_script('axios', 'https://unpkg.com/axios/dist/axios.min.js', array(), 1, true );
         wp_enqueue_script('passive', 'https://unpkg.com/default-passive-events', array(), 1, true );
         wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key='. MAPS_API . '&libraries=geometry,places', array(), 1 );
+        wp_enqueue_script('clusterer', 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', array(), 1);
     } 
     if ( is_page('find-us') ) {
         wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.js', array(), 3, true );

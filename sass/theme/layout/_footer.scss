@@ -6,19 +6,19 @@
     padding-top: 10rem;
     .row {
         display: flex;
-        #text-7 {
+        #text-7, #text-2 {
             width: 70%;
         }
         #text-3 {
             display: none;
         }
-        #text-4 {
+        #text-4, #text-6 {
             width: 15%;
         }
         #text-5 {
             width: 15%;
         }
-        #text-4, #text-5 {
+        #text-4, #text-5, #text-6 {
             p, a{
                 @include lightFont;
                 line-height: 4rem;
@@ -26,10 +26,10 @@
         }
         @include respond(tab-port){
             flex-wrap: wrap;
-            #text-7{
+            #text-7, #text-2{
                 width: 100%;
             }
-            #text-4, #text-5{
+            #text-4, #text-5, #text-6{
                 width: 50%;
                 margin-top: 10rem;
                 p, a{

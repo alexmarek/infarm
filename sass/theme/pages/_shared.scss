@@ -44,26 +44,83 @@
 
 // page sections
 
-.page-section{
-    
+.page-heading {
+    padding-left: 40%;
+    padding-bottom: 7.2rem;
+    padding-top: 14rem;
+    h1{
+        max-width: 64rem;
+    }
+    @include respond(tab-port) {
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.page-section{ 
+    @include respond(tab-port) {
+        padding-bottom: 5rem;
+    }
+    &__flex{
+        display: flex;
+        justify-content: flex-end;
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
     &__image {
-        margin-top: 14rem;
-        &__bg{
-            background-size: cover;
-            background-position: center;
-            width: 100vw;
-            height: 64rem;
-            margin-left: calc(((100vw - 144rem)/2) - (100vw - 144rem));
+        width: 40%;
+        @include respond(tab-port) {
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+        img {
+            max-width: 100%;
+        }
+        &--small{
+            img {
+                max-width: 32rem;
+                @include respond(tab-port) {
+                    max-width: 100%;
+                }
+            }
+
+        }
+        &--bg{
+            padding-top: 10rem;
+            div {
+                background-size: cover;
+                background-position: center;
+                width: 100vw;
+                height: 64rem;
+                margin-left: calc(((100vw - 144rem)/2) - (100vw - 143rem));
+            } 
         } 
         @include respond(tab-land) {
-            margin-top: 8rem;
-            &__bg{
-                height: 40rem;
-                margin-left: -3rem;
+            &--bg{
+                padding-top:0;
+                div {
+                    height: 40rem;
+                    margin-left: -5rem;
+                }
+                
             }
         }
     }
-    p {
-        font-size: 2.4rem;
+    &__copy {
+        padding-left: 0;
+        width: 60%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+        p {
+            font-size: 2.1rem;
+            max-width: 65rem;
+        }
+    }
+    
+    &:last-child{
+        padding-bottom: 16rem;
     }
 }

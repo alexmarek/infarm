@@ -44,7 +44,7 @@
 				$taste_title = get_the_title();
 				$taste_link = '<a href="' . $taste_url . '" title="' . $taste_title . '"><img src="' . get_field('taste_image')['url'] . '" alt=""></a>';
 
-				if(get_field('inactive')) : $taste_link = '<img src="' . get_field('taste_image') . '" title="Details coming soon" alt="Details coming soon" class="taste--inactive">'; endif;
+				if(get_field('inactive')) : $taste_link = '<img src="' . get_field('taste_image')['url'] . '" title="Details coming soon" alt="Details coming soon" class="taste--inactive">'; endif;
 		?>
 				<div class="col-1-of-6 taste__item">
 				

@@ -6,7 +6,8 @@
 			<source src="/video/infarm-homepage.webm" type="video/webm">
 		</video>
 
-		<div class="bg-video__poster" style="background-image: url(<?php  $image = get_field('page_header_image'); echo $image['url']; ?>)"></div>
+		<div class="bg-video__poster bg-video__poster--mobile" style="background-image: url(<?php  $image = get_field('page_header_image_mobile'); echo $image['url']; ?>)"></div>
+		<div class="bg-video__poster bg-video__poster--desktop" style="background-image: url(<?php  $image = get_field('page_header_image'); echo $image['url']; ?>)"></div>
 
 		<div class="container">
 			<h1 class="bg-video__title"><?php the_field('header_title'); ?></h1>
@@ -23,6 +24,10 @@
 		<div class="page-section">
 			<?php 
 				$image = get_sub_field('section_image');
+				$image_mobile = get_sub_field('section_image_mobile');
+				if (wp_is_mobile() && $image_mobile){
+					$image = $image_mobile;
+				}
 				if($image):
 			?>
 

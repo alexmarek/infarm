@@ -2,13 +2,13 @@
 // Color system
 //
 
-$primary : #231f20;
+$primary : #000;
 $primaryWhite : #FFFFFF;
-$text : #333333;
+$text : $primary;
 $secondary : #8a8a8a;
 $secondaryTwo: #dddede;
 $lightGrey: #f6f6f6;
-$buttonGrey: #2d2d2d;
+$buttonGrey: $primary;
 
 // FONT
 $default-font-size: 1.6rem;

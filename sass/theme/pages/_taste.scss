@@ -1,6 +1,9 @@
 .page-template-tastepage {
 
     .container {
+        .row [class^=col-]:not(:last-child) {
+            margin-right: 5rem;
+        }
         .taste-page-section {
             margin-top: 15rem;
             display: flex;
@@ -158,6 +161,9 @@
                 .page-section__image {
                     width: 40%;
                     margin-top: 4rem;
+                    img {
+                        height: 56rem;
+                    }
                 }
 
                 .page-section__copy {
@@ -263,7 +269,7 @@
         margin-top: 15rem;
         margin-bottom: 16rem;
         display: flex;
-        align-items: flex-start;
+        align-items: stretch;
 
         .page-section__image {
             width: 60%;
@@ -272,17 +278,19 @@
 
         .page-section__copy {
             width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
             h1 {
                 text-transform: uppercase;
                 max-width: 48rem;
                 font-size: 5.6rem;
-                margin-bottom: 6rem;
                 @include lightFont;
             }
 
             .button {
-                margin-top: 19rem;
+                align-self: flex-start;
             }
 
         }

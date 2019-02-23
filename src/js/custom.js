@@ -1,11 +1,8 @@
 jQuery(document).ready(function($){
 
-
-       
     $('.language-de .site-footer__back-to-top').html('Zurück zum Anfang <span class="site-footer__back-to-top__arrow"></span>');   
     $('.language-de .footer__mailchimp label').text('Melde Dich für unseren Newsletter an, um alle Updates über Infarm und unsere Produkte zu erhalten.');  
     $('.language-de .footer__mailchimp input[type=email]').attr('placeholder', 'Melde dich mit deiner E-Mail an');
-
 
     $(window).scroll(function() {
         var width = $(window).width();
@@ -22,6 +19,7 @@ jQuery(document).ready(function($){
 
     $('.lang-item-3 a, .lang-item-4 a').text('DE');
     $('.lang-item-6 a').text('EN');
+    $('.lang-item-24 a').text('FR');
     
     $('.home-slider').owlCarousel({
         items:1,
