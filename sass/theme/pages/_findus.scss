@@ -1,0 +1,239 @@
+.find-us {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    ::placeholder {
+        color: $primary;
+    }
+    select, input, button {
+        @include lightFont;
+        line-height: 5rem;
+        font-size: 1.6rem;
+    }
+    input,
+    select {
+        width: 100%;
+        height: 5rem;
+        line-height: 5rem;
+        background-color: $primaryWhite;
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 0 2rem;
+        border: solid 1px $primary;
+        position: relative;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url(../images/v-down.svg);
+        background-repeat: no-repeat;
+        background-position: 96%;
+        cursor: pointer;
+        border: solid 1px $primary;
+        @include respond(tab-port){
+            background-size: 2.6rem;
+        }
+    }
+    .location-input{
+        position: relative;
+        input {
+            padding-top: 3px;
+            margin: 2.5rem 0;
+        }
+        #location-submit {
+            position: absolute;
+            right: 1.6rem;
+            top: 3.6rem;
+            background-image: url(../images/search.svg);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: 100%;
+            width: 2.8rem;
+            height: 2.8rem;
+            border: 0;
+            text-indent: -500rem;
+            cursor: pointer;
+            @include respond(tab-port){
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+    }
+    .btn-locate-me {
+        width: 100%;
+        cursor: pointer;
+        background-position-x: 96%;
+        text-align: left;
+        background-image: url(../images/search-location.svg);
+        background-repeat: no-repeat;
+        background-color: #e1e1e1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+}
+
+.map-results{
+    display: flex;
+    justify-content: space-between;
+    #showListResults,
+    #showMapResults {
+        cursor: pointer;
+        padding-left: 3.5rem;
+        height: 3rem;
+        display: inline-block;
+        background-repeat: no-repeat;
+        color: $primary;
+        @include lightFont;
+        &.active{
+            @include boldFont;
+        }
+    }
+    #showMapResults{
+        margin-right: 3rem;
+        background-image: url(../images/results-map.svg); 
+    }
+    #showListResults {
+        background-image: url(../images/results-list.svg); 
+        background-position-y: 3px;
+    }
+}
+
+#map {
+    height: 72vh;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+}
+
+#mapList {
+    display: none;
+    text-transform: uppercase;
+    .info {
+        padding: 1rem 0;
+        span {
+            @include lightFont;
+            font-size: 1.4rem;
+        }
+        p{
+            text-transform: none;
+        }
+        h5 {
+            cursor: pointer;
+            display: inline-block;
+            &:hover {
+                border-bottom: solid 1px $secondary;
+            }
+        }
+    }
+    
+    .row {
+        margin: 0 -1.5rem;
+        padding:0 1.5rem;
+        transition: 0.15s ease-in-out all;
+        background-color: $primaryWhite;
+        &:hover {
+            background-color: $secondaryTwo;
+        }
+        div {
+            margin-bottom: 1rem;
+            &:first-child{
+                margin-bottom: 0;
+            }
+            &:last-child {
+                text-align: right;
+            } 
+        }
+    }     
+}
+
+#noResults {
+    margin: 10rem 0;
+    display: none;
+    #showAvailableCities {
+        cursor: pointer;
+    }    
+}
+
+.results-number {
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    -webkit-transition: .2s all ease-in-out;
+    transition: .2s all ease-in-out;
+    position: relative;
+    padding-left: 2rem;
+    &.loaded {
+        padding-left: 3.6rem;
+        .spinner {
+            opacity: 0;
+        }
+        #results-number{
+            opacity: 1;
+            -webkit-transition: 1s all ease-in-out;
+            transition: 1s all ease-in-out;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+    }
+    &.loading {
+        #results-number{
+            opacity: 0;
+        }
+        .spinner {
+            opacity: 1;
+        }
+    }
+}
+
+
+.map-infopanel {
+    p{
+        font-size: 1.6rem;
+        line-height: 2rem;
+        padding: 1rem 0;
+        letter-spacing: -0.5px;
+        max-width: 100%;
+    }
+    strong {
+        @include lightFont;
+    }
+    h4 {
+        text-transform: uppercase;
+        @include boldFont;
+    }
+} 
+
+.gm-style div div div div div div div div {
+    top: -10rem;
+}
+
+.gm-style div div div div div div div div h5 {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    @include boldFont;
+    padding-right: 5rem;
+    background-position: right -5px;
+    background-image: url(../images/arrow-black.svg);
+    background-repeat: no-repeat;
+    width: 12rem;
+    float: right;
+}
+
+.gm-style div div div div div div div div h5:hover {
+    text-decoration: underline;
+}
+
+@include respond(tab-port) {
+
+    .page-template-finduspage .gm-style div div div div div div div div {
+        top: -3rem;
+        max-width: 25rem;
+    }
+
+    .page-template-finduspage .gm-style div div div div div div div div h4 {
+        font-size: 1.2rem;
+    }
+}

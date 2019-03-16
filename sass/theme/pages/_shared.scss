@@ -1,0 +1,126 @@
+// sharing buttons, found on recipes page, can be shown elsewhere
+
+.share {
+    p {
+        font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+        text-align: right;
+    }
+
+    a {
+        display: inline-block;
+        width: 2.5rem;
+        height: 2rem;
+        background-position: center;
+        vertical-align: text-bottom;
+    }
+}
+
+.share__facebook {
+    background-image: url(../images/facebook.svg);
+    background-repeat: no-repeat;
+}
+
+.share__twitter {
+    background-image: url(../images/twitter.svg);
+    background-repeat: no-repeat;
+}
+
+.share__email {
+    background-image: url(../images/maill.svg);
+    background-repeat: no-repeat;
+}
+
+@include respond(tab-port) {
+    #cookie-law-info-bar {
+        line-height: 3rem;
+
+        .large.cli-plugin-button {
+            width: 95%;
+            text-align: center;
+        }
+    }
+}
+
+
+// page sections
+
+.page-heading {
+    padding-left: 40%;
+    padding-bottom: 7.2rem;
+    padding-top: 14rem;
+    h1{
+        max-width: 64rem;
+    }
+    @include respond(tab-port) {
+        padding-left: 0;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.page-section{ 
+    @include respond(tab-port) {
+        padding-bottom: 5rem;
+    }
+    &__flex{
+        display: flex;
+        justify-content: flex-end;
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+    &__image {
+        width: 40%;
+        @include respond(tab-port) {
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+        img {
+            max-width: 100%;
+        }
+        &--small{
+            img {
+                max-width: 32rem;
+                @include respond(tab-port) {
+                    max-width: 100%;
+                }
+            }
+
+        }
+        &--bg{
+            padding-top: 10rem;
+            div {
+                background-size: cover;
+                background-position: center;
+                width: 100vw;
+                height: 64rem;
+                margin-left: calc(((100vw - 144rem)/2) - (100vw - 143rem));
+            } 
+        } 
+        @include respond(tab-land) {
+            &--bg{
+                padding-top:0;
+                div {
+                    height: 40rem;
+                    margin-left: -5rem;
+                }
+                
+            }
+        }
+    }
+    &__copy {
+        padding-left: 0;
+        width: 60%;
+        @include respond(tab-port) {
+            width: 100%;
+        }
+        p {
+            font-size: 2.1rem;
+            max-width: 65rem;
+        }
+    }
+    
+    &:last-child{
+        padding-bottom: 16rem;
+    }
+}

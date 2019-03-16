@@ -1,0 +1,159 @@
+#wrapper-navbar {
+    background-color: $primaryWhite;
+    position: relative;
+    z-index: 1;
+
+    .navbar {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 9rem;
+
+        ul {
+            li {
+                a {
+                    text-transform: uppercase;
+                    font-weight: 300;
+                    font-size: 1.8rem;
+                    margin: 0 2.5em;
+                    color: $primary;
+                    line-height: 5em;
+                    -webkit-transition: all linear .2s;
+                    transition: all linear .2s;
+                    line-height: 5em;
+                    position: relative;
+                    text-decoration: none;
+
+                    @include respond(tab-land){
+                        margin: 0 1.3em;
+                    }
+
+                    @include respond(tab-port) {
+                        font-size: 3rem;
+                        line-height: 6rem;
+                    }
+                }
+            }
+
+            .lang-item {
+                a {
+                    margin: 0 .3em;
+
+                    @include respond(tab-port) {
+                        margin: 0 1.6em;
+                    }
+                }
+                &-en {
+                    margin-left: 2.5rem;
+                    @include respond(tab-port) {
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            .current-menu-item,
+            .current-lang {
+                a {
+                    font-weight: bold;
+                }
+            }
+            @include respond(tab-port) {
+                margin-top: 15rem;
+                li {
+                    width: 100%;
+                    a {
+                        font-size: 2.4rem;
+                        @include lightFont;
+                    }
+                }
+            }
+        }
+
+        .navbar-brand {
+            display: inline-block;
+            background-image: url(../images/if-logo-black.svg);
+            background-repeat: no-repeat;
+            width: 14rem;
+            height: 4.3rem;
+            text-indent: -500rem;
+            z-index: 1;
+        }
+
+        input {
+            display: none;
+            &:checked {
+                ~ .navbar-toggler-icon{
+                    background-image: url(../images/black-slim.svg);
+                }
+                
+                ~ .navbar-collapse {
+                    transform: translateX(0);
+                    pointer-events: all;
+                }
+            } 
+            
+        }
+
+        .navbar-toggler-icon {
+            background-image: url(../images/menu-slim.svg);
+            background-repeat: no-repeat;
+            width: 4rem;
+            height: 4rem;
+            background-size: 100%;
+            z-index: 1;
+            border: none;
+            display: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            @include respond(tab-port) {
+                display: inline-block;
+                position: absolute;
+                right: 3rem;
+                top: 2rem;
+            }
+        }
+    }
+}
+
+.fixed-nav #wrapper-navbar {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 7rem;
+    top: 0;
+    border-bottom: 2px solid $lightGrey;
+    animation-name: moveInTop;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+
+    .navbar {
+        height: 7rem;
+    }
+}
+
+.fixed-nav #wrapper-navbar .navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+    background-image: url(../images/black-slim.svg);
+    background-repeat: no-repeat;
+    z-index: 1;
+    position: relative;
+    right: -3rem;
+    top: 1.5rem;
+}
+
+
+@include respond(tab-port) {
+    .navbar-collapse {
+        background-position: 3rem 3rem;
+        background-size: 15rem;
+        background-color: $primaryWhite;
+        position: fixed;
+        left: -1rem;
+        top: -1.5rem;
+        bottom: 0;
+        right: 0;
+        transform: translateX(-160rem);
+        transition: 0.5s transform ease-in-out;
+    }
+}

@@ -1,0 +1,8 @@
+<svg width="48px" height="63px" viewBox="0 0 48 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="map-marker" fill="#000000" fill-rule="nonzero">
+            <path d="M21.5335,61.7289107 C3.37125,35.8104463 0,33.1504196 0,23.6249942 C0,10.5772298 10.745125,0 24,0 C37.254875,0 48,10.5772298 48,23.6249942 C48,33.1504196 44.62875,35.8104463 26.4665,61.7289107 C25.274625,63.423758 22.72525,63.4236349 21.5335,61.7289107 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

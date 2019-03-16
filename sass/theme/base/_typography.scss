@@ -1,0 +1,125 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+@font-face {
+    font-family: 'FedraSansLight';
+    src: url('../fonts/') format('woff2'),
+     url('../fonts/FedraSansStd-Light.woff2') format('woff2'),
+        url('../fonts/FedraSansStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'FedraSansStd';
+  src: url('../fonts/FedraSansStd-Medium.woff2') format('woff2'),
+      url('../fonts/FedraSansStd-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'FedraSansBold';
+    src: url('../fonts/FedraSansStd-Bold.woff2') format('woff2'),
+        url('../fonts/FedraSansStd-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+  font-family: 'FedraSerifStd';
+  src: url('../fonts/FedraSerifA-Book.woff2') format('woff2'),
+      url('../fonts/FedraSerifA-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'FedraSerifBold';
+    src: url('../fonts/FedraSerifA-Bold.woff2') format('woff2'),
+        url('../fonts/FedraSerifA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    color: $text;
+    background: $primaryWhite;
+    font-family: FedraSansStd, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 2rem;
+    box-sizing: border-box;
+}
+
+.main-heading,
+h3 {
+    font-size: 5.7rem;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: .5px;
+    color: $primary;
+    max-width: 40rem;
+    margin-bottom: .8em;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    @include lightFont;
+}
+
+h1,
+h2 {
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+.title{
+    font-size: 5.8rem;
+    @include lightFont;
+    text-transform: uppercase;
+    @include respond(tab-port){
+        font-size: 4.4rem;
+    }
+}
+
+p {
+    font-family: FedraSerifStd, Georgia, 'Times New Roman', Times, serif;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: .3;
+    max-width: 100%;
+}
+
+.bold {
+    font-family: FedraSansBold, Arial, Helvetica, sans-serif;
+}

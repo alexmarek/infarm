@@ -1,0 +1,324 @@
+.page-template-tastepage {
+
+    .container {
+        .row [class^=col-]:not(:last-child) {
+            margin-right: 5rem;
+        }
+        .taste-page-section {
+            margin-top: 15rem;
+            display: flex;
+
+            .page-section__image {
+                width: 40%;
+            }
+
+            .page-section__copy {
+                width: 60%;
+
+                h1 p {
+                    max-width: 68rem;
+                    font-size: 5.6rem;
+                    margin-bottom: 6rem;
+                    max-width: 70rem;
+                    @include lightFont;
+                }
+
+            }
+
+            @include respond(tab-port) {
+                margin-top: 8rem;
+                margin-left: 0;
+                flex-direction: column;
+
+                .page-section__copy {
+                    width: 100%;
+
+                    h1 p {
+                        max-width: 100%;
+                        font-size: 4rem;
+                    }
+                }
+
+                .page-section__image {
+                    display: none;
+                }
+            }
+        }
+
+        .page-section {
+            margin-top: 15rem;
+            margin-bottom: 16rem;
+            display: flex;
+            align-items: flex-start;
+
+            .page-section__image {
+                width: 60%;
+                margin: 0;
+            }
+
+            .page-section__copy {
+                width: 40%;
+
+                h1 {
+                    max-width: 48rem;
+                    font-size: 5.6rem;
+                    margin-bottom: 6rem;
+                    @include lightFont;
+                }
+
+                .button {
+                    margin-top: 16rem;
+                }
+
+            }
+
+            @include respond(tab-port) {
+                margin-top: 8rem;
+                margin-left: 0;
+                flex-direction: column;
+
+                .page-section__copy {
+                    width: 100%;
+                    order: 1;
+
+                    h1 p {
+                        max-width: 100%;
+                        font-size: 4rem;
+                    }
+
+                    .button {
+                        margin-top: 0;
+                    }
+                }
+
+                .page-section__image {
+                    width: 100%;
+                    margin: 4rem 0;
+                }
+
+            }
+        }
+    }
+
+    .taste__item {
+        transition: .2s ease-in-out background-color;
+        padding: 1em 0;
+        text-align: center;
+        height: 25rem;
+
+        @include respond(tab-port) {
+            height: 35rem;
+        }
+
+        img {
+            transition: .3s ease-in-out transform;
+            height: 15rem;
+
+            @include respond(tab-port) {
+                height: 25rem;
+            }
+
+            &.taste--inactive {
+                opacity: 0.6;
+
+                ~h5 {
+                    opacity: 0.6;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: $lightGrey;
+            opacity: 1;
+
+            img {
+                -webkit-transform: scale(1.2);
+                transform: scale(1.2);
+            }
+        }
+
+        a:hover {
+            opacity: 1;
+        }
+
+        h5 {
+            text-transform: uppercase;
+            max-width: 13rem;
+            font-size: 2.4rem;
+            margin: auto;
+            @include lightFont;
+        }
+    }
+}
+
+.single-taste {
+    .container {
+        .page-section {
+            &:nth-child(1) {
+                margin-top: 15rem;
+                display: flex;
+
+                .page-section__image {
+                    width: 40%;
+                    margin-top: 4rem;
+                    img {
+                        height: 56rem;
+                    }
+                }
+
+                .page-section__copy {
+                    width: 60%;
+
+                    h1 {
+                        max-width: 50rem
+                    }
+
+                    p {
+                        max-width: 55rem;
+                        margin-bottom: 0;
+                    }
+                }
+
+                @include respond(tab-port) {
+                    margin-top: 8rem;
+                    margin-left: 0;
+                    flex-direction: column;
+
+                    .page-section__copy {
+                        width: 100%;
+
+                        h1,
+                        p {
+                            max-width: 100%;
+                        }
+                    }
+
+                    .page-section__image {
+                        width: 100%;
+                    }
+                }
+            }
+
+            h1 {
+                margin-bottom: 6rem;
+                max-width: 70rem;
+            }
+
+            p {
+                max-width: 65rem;
+                margin-bottom: 8rem;
+            }
+        }
+        @include respond(tab-port){
+            margin-bottom: 7rem;
+        }
+    }
+    .taste-section {
+        display: flex;
+        &__spacer{
+            width: 40%;
+            @include respond(tab-port){
+                display: none;
+            }
+        }
+        &__content{
+            width: 60%;
+            display: flex;
+            flex-wrap: wrap;
+            .taste-section__copy{
+                width: 50%;
+                padding-right: 6rem;
+                .title {
+                    font-size: 2.4rem;
+                    @include regularFont;
+                    margin-bottom:4rem;
+                }
+                p{
+                    font-size: 2.4rem;
+                }
+                &:nth-child(1){
+                    order: 0;
+                }
+                &:nth-child(2){
+                    order: 2;
+                }
+                &:nth-child(3){
+                    order: 3;
+                }
+                @include respond(tab-port){
+                    width: 100%;
+                    margin-bottom: 7rem;
+                }
+            }
+            .taste-profile{
+                &__image {
+                    order: 1;
+                    margin-bottom: 7rem;
+                    img {
+                        width: 30rem;
+                    }
+
+                }
+            }
+            @include respond(tab-port){
+                width: 100%;
+            }
+        }
+    }
+    .taste-section--taste-more {
+        margin-top: 15rem;
+        margin-bottom: 16rem;
+        display: flex;
+        align-items: stretch;
+
+        .page-section__image {
+            width: 60%;
+            margin: 0;
+        }
+
+        .page-section__copy {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h1 {
+                text-transform: uppercase;
+                max-width: 48rem;
+                font-size: 5.6rem;
+                @include lightFont;
+            }
+
+            .button {
+                align-self: flex-start;
+            }
+
+        }
+
+        @include respond(tab-port) {
+            margin-top: 8rem;
+            margin-left: 0;
+            flex-direction: column;
+
+            .page-section__copy {
+                width: 100%;
+                order: 1;
+
+                h1 {
+                    max-width: 100%;
+                    font-size: 4rem;
+                }
+
+                .button {
+                    margin-top: 0;
+                }
+            }
+
+            .page-section__image {
+                width: 100%;
+                margin: 4rem 0;
+            }
+
+        }
+    }
+}

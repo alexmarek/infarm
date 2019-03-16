@@ -1,0 +1,90 @@
+.contact-page {
+    max-width: 100rem;
+
+    ::placeholder {
+        color: #b8b8b8;
+    }
+    select, input, button, textarea {
+        @include lightFont;
+        line-height: 5rem;
+        font-size: 1.6rem;
+        margin-bottom: 2.3rem;
+    }
+    input,
+    select {
+        width: 100%;
+        height: 5rem;
+        line-height: 5rem;
+        background-color: $primaryWhite;
+        border: 0;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 0 2rem;
+        border: solid 1px $primary;
+        position: relative;
+    }
+    textarea {
+        border: solid 1px $primary;
+        width: 100%;
+        text-transform: uppercase;
+        padding: 0 2rem;
+        height: 28rem;
+    }
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url(../images/v-down.svg);
+        background-repeat: no-repeat;
+        background-position: 96%;
+        cursor: pointer;
+        border: solid 1px $primary;
+        @include respond(tab-port){
+            background-size: 2.6rem;
+        }
+    }
+    input[type="submit"]{
+        &:hover {
+            text-decoration: none;
+            color: $primary;
+            box-shadow: inset 0px 0px 0px 3px $primary;
+        }
+    }
+
+    .wpcf7 input:not(:disabled):not(.disabled)[type=submit] {
+        text-transform: uppercase;
+        border: solid 1px $primary;
+        text-decoration: none;
+        height: 5rem;
+        line-height: 5rem;
+        transition: .2s all ease-in-out;
+        padding: 0 2rem;
+        background-color: $primaryWhite;
+        position: relative;
+        font-size: .9em;
+        @include regularFont;
+        color: $primary;
+        width: 14rem;
+        cursor: pointer;
+        background: transparent;
+        float: right;
+    
+        &:hover {
+            text-decoration: none;
+            opacity: 0.8;
+            color: $primary;
+            border-bottom: solid 1px;
+            background: none;
+        }
+    }
+
+    span.wpcf7-not-valid-tip, div.wpcf7-response-output {
+        @include lightFont;
+        font-size: 1.4rem;
+        border: none;
+        margin: 1rem 0;
+        padding: 0;
+        clear: both;
+    }
+}
+   

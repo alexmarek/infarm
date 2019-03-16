@@ -1,0 +1,131 @@
+* {
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+::selection {
+    background-color: $secondaryTwo;
+    color: $primary;
+}
+
+html {
+
+    &[lang=de-DE],
+    &[lang=en-GB],
+    &[lang=fr-FR] {
+        margin-top: 0 !important;
+    }
+
+    &[lang=de-DE] #wpadminbar,
+    &[lang=en-GB] #wpadminbar,
+    &[lang=fr-FR] #wpadminbar {
+        display: none;
+    }
+}
+
+input:-webkit-autofill {
+    border: 1px solid $primaryWhite;
+    -webkit-text-fill-color: $primaryWhite;
+    -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+    transition: background-color 5000s ease-in-out 0s;
+
+    &:focus input:-webkit-autofill,
+    &:hover {
+        border: 1px solid $primaryWhite;
+        -webkit-text-fill-color: $primaryWhite;
+        box-shadow: 0 0 0 100rem $primary inset;
+
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+select:-webkit-autofill {
+    border: 1px solid $primaryWhite;
+    -webkit-text-fill-color: $primaryWhite;
+    -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+    transition: background-color 5000s ease-in-out 0s;
+
+    &:focus,
+    &:hover {
+        border: 1px solid $primaryWhite;
+        -webkit-text-fill-color: $primaryWhite;
+        -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+textarea:-webkit-autofill {
+    border: 1px solid $primaryWhite;
+    -webkit-text-fill-color: $primaryWhite;
+    -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+    transition: background-color 5000s ease-in-out 0s;
+
+    &:hover textarea:-webkit-autofill:focus {
+        border: 1px solid $primaryWhite;
+        -webkit-text-fill-color: $primaryWhite;
+        -webkit-box-shadow: 0 0 0 100rem $primary inset;
+
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        display: inline-block;
+    }
+}
+
+input {
+
+    &:active,
+    &:focus,
+    &:hover {
+        outline: 0;
+    }
+}
+
+input, select, textarea {
+    @include regularFont;
+}
+
+a {
+    color: $primary;
+    transition: all 0.15s ease-in-out;
+
+    &:hover:not(.button) {
+        opacity: 0.6;
+    }
+}
+
+h2 a {
+    text-decoration: none;
+    border-bottom: solid 2px $primary;
+    &:hover {
+        text-decoration: none;
+        border-color: $primaryWhite;
+        opacity: 0.6;
+    }
+}
+
+.navbar-brand, .nav-link {
+    border-bottom: 0;
+}
+
+:focus {
+    outline: 0;
+}
+
+img {
+    max-width: 100%;
+}
