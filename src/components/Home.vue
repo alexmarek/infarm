@@ -15,7 +15,7 @@ export default {
   name: "Home",
   data() {
     return {
-      msg: "Welcome to Infinity Seeker's Portfolio site"
+      msg: "Web Development"
     };
   },
   created() {

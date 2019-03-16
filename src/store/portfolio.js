@@ -1,7 +1,7 @@
 import Vapi from 'vuex-rest-api'
 
 const portfolio = new Vapi({
-  baseURL: 'https://infinityseeker.com/wp-json/wp/v2/',
+  baseURL: 'https://data.infinityseeker.com/wp-json/wp/v2/',
   state: {
     portfolio: []
   }

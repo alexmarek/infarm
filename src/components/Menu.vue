@@ -6,30 +6,22 @@
           to="/"
           class="nav-item nav-link"
           active-class="active"
-        >
-          Home
-        </router-link>
+        >Home</router-link>
         <router-link
-          to="portfolio"
+          to="/portfolio"
           class="nav-item nav-link"
           active-class="active"
-        >
-          Portfolio
-        </router-link>
+        >Portfolio</router-link>
         <router-link
-          to="about"
+          to="/about"
           class="nav-item nav-link"
           active-class="active"
-        >
-          About
-        </router-link>
+        >About</router-link>
         <router-link
-          to="contact"
+          to="/contact"
           class="nav-item nav-link"
           active-class="active"
-        >
-          Contact
-        </router-link>
+        >Contact</router-link>
       </div>
     </div>
   </nav>

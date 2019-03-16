@@ -1,9 +1,7 @@
 <template>
   <div class="contact">
     <h1>{{ msg }}</h1>
-     <ul>
-      <li v-if="Object.keys(pages.pages[2].content).length > 0"   v-html="pages.pages[2].content.rendered" ></li>
-    </ul>
+     <p>alex at infinityseeker.com</p>
   </div>
 </template>
 

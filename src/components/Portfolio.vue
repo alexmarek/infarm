@@ -3,11 +3,11 @@
     <h1>{{ msg }}</h1>
     <ul class="portfolio" v-masonry transition-duration="0.3s" item-selector=".portfolio__item">
       <li v-masonry-tile class="portfolio__item"  v-for="(item, index) in portfolio.portfolio" :key="index">
-        <a :href="'portfolio/' + item.slug">
+        <router-link :to="'portfolio/' + item.slug">
           <div class="portfolio__item__bg" :style="{'background-color': item.acf.hover_background}"></div>
           <img :src="item.acf.portfolio_image" :alt="item.title.rendered" :title="item.title.rendered" />
           <h2>{{ item.title.rendered }}</h2>
-        </a>
+        </router-link>
       </li>
     </ul>
 
